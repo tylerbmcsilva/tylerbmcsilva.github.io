@@ -1,7 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
-import pic01 from '../images/pic01.jpg';
 import pic02 from '../images/pic02.jpg';
 
 class Main extends React.Component {
@@ -17,7 +15,7 @@ class Main extends React.Component {
           {/* Github chart provided by: https://ghchart.rshah.org */}
           <span className="image main"><img src="http://ghchart.rshah.org/9C27B0/tylerbmcsilva" alt="tylerbmcsilva's Github contribution chart" />
 </span>
-          <p>Currently working at <a href="https://broadly.com" target="_blank">Broadly</a> as a software engineer. Started there in the customer success team, and after receiving my B.S. in Computer Science from Oregon State University, switched onto the Product team.</p>
+          <p>Currently working at <a href="https://broadly.com" target="_blank" rel="noopener noreferrer">Broadly</a> as a software engineer. Started there in the customer success team, and after receiving my B.S. in Computer Science from Oregon State University, switched onto the Product team.</p>
           <p>I have a wide varity of skills, but currently I'm working with:
           <ul>
             <li>Node.js Backend</li>
@@ -58,10 +56,10 @@ class Main extends React.Component {
             </ul>
           </form>
           <ul className="icons">
-            <li><a href="https://github.com/tylerbmcsilva" className="icon fa-github" target="_blank"><span className="label">GitHub</span></a></li>
-            <li><a href="https://linkedin.com/in/tylerbmcsilva" className="icon fa-linkedin" target="_blank"><span className="label">LinkedId</span></a></li>
-            <li><a href="https://twitter.com/tymcsilva" className="icon fa-twitter" target="_blank"><span className="label">Twitter</span></a></li>
-            <li><a href="https://instagram.com/tymcsilva" className="icon fa-instagram" target="_blank"><span className="label">Instagram</span></a></li>
+            <li><a href="https://github.com/tylerbmcsilva" className="icon fa-github" target="_blank" rel="noopener noreferrer"><span className="label">GitHub</span></a></li>
+            <li><a href="https://linkedin.com/in/tylerbmcsilva" className="icon fa-linkedin" target="_blank" rel="noopener noreferrer"><span className="label">LinkedId</span></a></li>
+            <li><a href="https://twitter.com/tymcsilva" className="icon fa-twitter" target="_blank" rel="noopener noreferrer"><span className="label">Twitter</span></a></li>
+            <li><a href="https://instagram.com/tymcsilva" className="icon fa-instagram" target="_blank" rel="noopener noreferrer"><span className="label">Instagram</span></a></li>
           </ul>
           {close}
         </article>
