@@ -2,7 +2,8 @@ module.exports = {
   siteMetadata: {
     title: "Tyler McSilva – Software Engineer ",
     author: "Tyler McSilva",
-    description: "Software Engineer & Gamer"
+    description: "Software Engineer & Gamer",
+    keywords: 'software engineer, node, react, baltimore, maryland, remote'
   },
   plugins: [
     'gatsby-plugin-react-helmet',

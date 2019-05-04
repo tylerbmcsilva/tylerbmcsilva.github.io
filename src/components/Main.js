@@ -24,18 +24,26 @@ class Main extends React.Component {
           <span className="image main"><img src="http://ghchart.rshah.org/9C27B0/tylerbmcsilva" alt="tylerbmcsilva's Github contribution chart" />
 </span>
           <p>Currently working at <a href="https://broadly.com" target="_blank" rel="noopener noreferrer">Broadly</a> as a software engineer. Started there in the customer success team, and after receiving my B.S. in Computer Science from Oregon State University, switched onto the Product team.</p>
-          <p>I have a wide varity of skills, but currently I'm working with:
+          <p>Currently I'm working with:
           <ul>
-            <li>Node.js Backend</li>
+            <li>Node.js/Express Backend</li>
             <li>React/Redux Frontend</li>
             <li>Mocha/Puppeteer/Enzyme for Tests</li>
             <li>MongoDB</li>
           </ul>
           </p>
-          <p>My Interests include:
+          <p>
+            But I also have some experience with:
+            <ul>
+              <li>C/C++</li>
+              <li>SQL</li>
+              <li>Python</li>
+            </ul>
+          </p>
+          <p>My interests also include:
             <ul>
               <li>2D/3D Animation</li>
-              <li></li>
+              <li>Politics & Technology</li>
             </ul>
           </p>
         </Article>
@@ -47,24 +55,9 @@ class Main extends React.Component {
         </Article>
 
         <Article id="contact" title="Contact" active={article === 'contact'} onCloseArticle={handleCloseArticle} articleTimeout={articleTimeout}>
-          <form method="post" action="#">
-            <div className="field half first">
-              <label htmlFor="name">Name</label>
-              <input type="text" name="name" id="name" />
-            </div>
-            <div className="field half">
-              <label htmlFor="email">Email</label>
-              <input type="text" name="email" id="email" />
-            </div>
-            <div className="field">
-              <label htmlFor="message">Message</label>
-              <textarea name="message" id="message" rows="4"></textarea>
-            </div>
-            <ul className="actions">
-              <li><input type="submit" value="Send Message" className="special" /></li>
-              <li><input type="reset" value="Reset" /></li>
-            </ul>
-          </form>
+          <p>Contact form coming soon. For now, you can reach me at:</p>
+          <p>tylerbmcsilva AT gmail DOT com</p>
+          <p>or at any of these social media sites:</p> 
           <ul className="icons">
             <li><a href="https://github.com/tylerbmcsilva" className="icon fa-github" target="_blank" rel="noopener noreferrer"><span className="label">GitHub</span></a></li>
             <li><a href="https://linkedin.com/in/tylerbmcsilva" className="icon fa-linkedin" target="_blank" rel="noopener noreferrer"><span className="label">LinkedId</span></a></li>
