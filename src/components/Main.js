@@ -1,10 +1,9 @@
 import React     from 'react';
 import PropTypes from 'prop-types';
-import pic02     from '../images/pic02.jpg';
-import Article   from './Article';
+import Article   from './article';
 
 
-class Main extends React.Component {
+export default class Main extends React.Component {
   render() {
     const { article }            = this.props;
     const { articleTimeout }     = this.props;
@@ -49,7 +48,6 @@ class Main extends React.Component {
         </Article>
 
         <Article id="life" title="Life" active={article === 'life'} onCloseArticle={handleCloseArticle} articleTimeout={articleTimeout}>
-          <span className="image main"><img src={pic02} alt="" /></span>
           <p>Grew up in the midwest, but have since ventured out to California, and now Maryland. Currently living in Baltimore with the best husband I could ask for and my two beautiful dogs.</p>
           <p>My hobbies include...</p>
         </Article>
@@ -66,7 +64,7 @@ class Main extends React.Component {
           </ul>
         </Article>
       </div>
-    )
+    );
   }
 }
 
@@ -78,7 +76,4 @@ Main.propTypes = {
   onCloseArticle: PropTypes.func,
   timeout:        PropTypes.bool,
   setWrapperRef:  PropTypes.func.isRequired
-}
-
-
-export default Main;
+};

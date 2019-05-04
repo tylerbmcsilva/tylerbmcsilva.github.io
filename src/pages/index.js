@@ -1,12 +1,13 @@
 import React  from 'react';
-import Layout from '../components/Layout';
-
-import Header from '../components/Header';
-import Main   from '../components/Main';
-import Footer from '../components/Footer';
+import Layout from '../components/layout';
 
 
-class IndexPage extends React.Component {
+import Header from '../components/header';
+import Main   from '../components/main';
+import Footer from '../components/footer';
+
+
+export default class IndexPage extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -124,5 +125,3 @@ class IndexPage extends React.Component {
     )
   }
 }
-
-export default IndexPage
