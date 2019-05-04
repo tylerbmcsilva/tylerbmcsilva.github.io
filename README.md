@@ -17,5 +17,5 @@ $ yarn develop
 
 
 Built with the help of:
-https://www.gatsbyjs.org/
-https://github.com/codebushi/gatsby-starter-dimension`
+- https://www.gatsbyjs.org/
+- https://github.com/codebushi/gatsby-starter-dimension`
