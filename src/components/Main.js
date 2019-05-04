@@ -1,17 +1,25 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import pic02 from '../images/pic02.jpg';
+import React     from 'react';
+import PropTypes from 'prop-types';
+import pic02     from '../images/pic02.jpg';
+import Article   from './Article';
+
 
 class Main extends React.Component {
   render() {
+    const { article }            = this.props;
+    const { articleTimeout }     = this.props;
+    const { handleCloseArticle } = this.props;
+    const { setWrapperRef }      = this.props;
+    const { timeout }            = this.props;
 
-    let close = <div className="close" onClick={() => {this.props.onCloseArticle()}}></div>
+    const style = {
+      display: timeout ? 'flex' : 'none'
+    } 
 
     return (
-      <div ref={this.props.setWrapperRef} id="main" style={this.props.timeout ? {display: 'flex'} : {display: 'none'}}>
+      <div ref={setWrapperRef} id="main" style={style}>
 
-        <article id="work" className={`${this.props.article === 'work' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
-          <h2 className="major">Work</h2>
+        <Article id="work" title="Work" active={article === 'work'} onCloseArticle={handleCloseArticle} articleTimeout={articleTimeout}>
           {/* Github chart provided by: https://ghchart.rshah.org */}
           <span className="image main"><img src="http://ghchart.rshah.org/9C27B0/tylerbmcsilva" alt="tylerbmcsilva's Github contribution chart" />
 </span>
@@ -20,23 +28,25 @@ class Main extends React.Component {
           <ul>
             <li>Node.js Backend</li>
             <li>React/Redux Frontend</li>
-            <li>Mocha/Puppeteer/Enzyme Test Suitesx</li>
+            <li>Mocha/Puppeteer/Enzyme for Tests</li>
             <li>MongoDB</li>
           </ul>
           </p>
-          {close}
-        </article>
+          <p>My Interests include:
+            <ul>
+              <li>2D/3D Animation</li>
+              <li></li>
+            </ul>
+          </p>
+        </Article>
 
-        <article id="life" className={`${this.props.article === 'life' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
-          <h2 className="major">Life</h2>
+        <Article id="life" title="Life" active={article === 'life'} onCloseArticle={handleCloseArticle} articleTimeout={articleTimeout}>
           <span className="image main"><img src={pic02} alt="" /></span>
           <p>Grew up in the midwest, but have since ventured out to California, and now Maryland. Currently living in Baltimore with the best husband I could ask for and my two beautiful dogs.</p>
           <p>My hobbies include...</p>
-          {close}
-        </article>
+        </Article>
 
-        <article id="contact" className={`${this.props.article === 'contact' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
-          <h2 className="major">Contact</h2>
+        <Article id="contact" title="Contact" active={article === 'contact'} onCloseArticle={handleCloseArticle} articleTimeout={articleTimeout}>
           <form method="post" action="#">
             <div className="field half first">
               <label htmlFor="name">Name</label>
@@ -61,21 +71,21 @@ class Main extends React.Component {
             <li><a href="https://twitter.com/tymcsilva" className="icon fa-twitter" target="_blank" rel="noopener noreferrer"><span className="label">Twitter</span></a></li>
             <li><a href="https://instagram.com/tymcsilva" className="icon fa-instagram" target="_blank" rel="noopener noreferrer"><span className="label">Instagram</span></a></li>
           </ul>
-          {close}
-        </article>
-
+        </Article>
       </div>
     )
   }
 }
 
+
 Main.propTypes = {
-  route: PropTypes.object,
-  article: PropTypes.string,
+  route:          PropTypes.object,
+  article:        PropTypes.string,
   articleTimeout: PropTypes.bool,
   onCloseArticle: PropTypes.func,
-  timeout: PropTypes.bool,
-  setWrapperRef: PropTypes.func.isRequired,
+  timeout:        PropTypes.bool,
+  setWrapperRef:  PropTypes.func.isRequired
 }
 
-export default Main
+
+export default Main;
